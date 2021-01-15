@@ -2,7 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function()
+use App\Http\Controllers\Front;
+use App\Http\Controllers\Developing;
+
+Route::get('/', [Front\HomeController::class, 'Index'])->name('home');
+
+Route::group(['prefix' => 'test'], function()
 {
-    return TextResponse('張成崗個人網站');
+    Route::get('/', [Developing\TestController::class, 'Main']);
 });
