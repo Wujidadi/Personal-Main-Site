@@ -10,8 +10,8 @@ class HomeController extends Controller
     public function Index()
     {
         $Title = '張成崗個人網站';
-
-        return '歡迎來到' . $Title;
+        $MessageShown = ('歡迎來到' . $Title);
+        return TextResponse($MessageShown);
 
         // return view('front.home.index', compact(
         //     'Title'
