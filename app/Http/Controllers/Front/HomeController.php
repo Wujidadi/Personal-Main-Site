@@ -9,8 +9,7 @@ class HomeController extends Controller
 {
     public function Index()
     {
-        $Title = '張成崗個人網站';
-        $MessageShown = ('歡迎來到' . $Title);
+        $MessageShown = 'Welcome to Wujidadi\'s main site';
         return TextResponse($MessageShown);
 
         // return view('front.home.index', compact(
